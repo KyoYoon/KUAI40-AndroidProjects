@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.koruniv.user.fourbutton.MainActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnDaum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:text="다음 홈페이지 열기"/>
+
+    <Button
+        android:id="@+id/btn911"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff00ff"
+        android:text="911 응급전화 걸기"/>
+
+    <Button
+        android:id="@+id/btnGal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ff00"
+        android:text="갤러리 열기"/>
+
+    <Button
+        android:id="@+id/btnEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ffff"
+        android:text="끝내기"/>
+
+</LinearLayout>
