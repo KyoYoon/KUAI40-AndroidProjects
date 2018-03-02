@@ -14,8 +14,12 @@
 ## 3. 수업 담당 강사
 * 백승일 강사님
 
-## 3. 개발툴 정보
+## 4. 개발툴 정보
 * 안드로이드 스튜디오(Android Studio) 3.0.1
 
 
 ![안드로이드 스튜디오 3.0.1](/images/android_studio_version.jpg)
+
+
+## 5. 수업 관련 정보
+* [Week1](/week1/week1.md)
