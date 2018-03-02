@@ -120,20 +120,20 @@
 ## 3. 실행화면
 
 초기 화면
-![실행화면1](/images/fourbutton1.jpg)
+![실행화면1](/week1/images/fourbutton1.jpg)
 
 
 크롬 브라우저내에서 다음 웹사이트로 이동했을 때
-![실행화면2](/images/fourbutton2.jpg)
+![실행화면2](/week1/images/fourbutton2.jpg)
 
 
 연락처(911 응급전화) 실행했을 때
-![실행화면3](/images/fourbutton3.jpg)
+![실행화면3](/week1/images/fourbutton3.jpg)
 
 
 갤러리 열었을 때
-![실행화면4](/images/fourbutton4.jpg)
+![실행화면4](/week1/images/fourbutton4.jpg)
 
 
 앱 종료 후
-![실행화면5](/images/fourbutton5.jpg)
+![실행화면5](/week1/images/fourbutton5.jpg)
