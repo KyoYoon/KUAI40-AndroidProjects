@@ -23,3 +23,4 @@
 
 ## 5. 수업 관련 정보
 * [Week1](/week1/week1.md)
+* [Week2](/week2/week2.md)

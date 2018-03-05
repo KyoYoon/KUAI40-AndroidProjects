@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="com.koruniv.user.calculator.MainActivity">
+
+    <EditText
+        android:id="@+id/editTxtNum1"
+        android:layout_width="630dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0px"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="숫자를 입력하세요."
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editTxtNum2"
+        android:layout_width="630dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0px"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="숫자를 입력하세요."
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="630dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5px"
+        android:layout_weight="1"
+        android:hint="계산결과 표시"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="5px"
+        android:background="#0000ff"
+        android:text="더하기" />
+
+    <Button
+        android:id="@+id/btnSubtract"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="5px"
+        android:background="#ffff00"
+        android:text="빼기" />
+
+    <Button
+        android:id="@+id/btnMultiply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="5px"
+        android:background="#ff0000"
+        android:text="곱하기" />
+
+    <Button
+        android:id="@+id/btnDivide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="5px"
+        android:background="#ff00ff"
+        android:text="나누기" />
+
+    <Button
+        android:id="@+id/btnMod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="5px"
+        android:background="#00ff00"
+        android:text="나머지" />
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="5px"
+        android:background="#00ffff"
+        android:text="종료" />
+
+
+</LinearLayout>
