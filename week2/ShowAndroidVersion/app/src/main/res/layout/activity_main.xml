@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingRight="5px"
+        tools:context="com.koruniv.user.showandroidversion.MainActivity">
+
+        <TextView
+            android:id="@+id/TextView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="선택을 하시겠습니까?"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <Switch
+            android:id="@+id/SwitchStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:checked="false"
+            android:text="시작"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/TextView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="좋아하는 안드로이드 버전은? "
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:visibility="invisible" />
+
+        <RadioGroup
+            android:id="@+id/RadioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="95dp"
+            android:visibility="invisible">
+
+            <RadioButton
+                android:id="@+id/RadioAndroid50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안드로이드 5.0 롤리팝" />
+
+            <RadioButton
+                android:id="@+id/RadioAndroid60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안드로이드 6.0 마시멜로우" />
+
+            <RadioButton
+                android:id="@+id/RadioAndroid70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안드로이드 7.0 누가" />
+
+        </RadioGroup>
+
+<!--        <Button
+            android:id="@+id/BtnSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="선택"
+            android:visibility="invisible" />-->
+
+        <ImageView
+            android:id="@+id/ImgAndroid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:visibility="invisible" />
+
+
+
+        <Button
+            android:id="@+id/BtnRestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="Restart"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/BtnFinish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="Finish"
+            android:visibility="invisible" />
+
+
+
+    </LinearLayout>
+</ScrollView>
