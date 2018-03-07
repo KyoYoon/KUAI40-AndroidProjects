@@ -35,4 +35,67 @@
         android:layout_toLeftOf="@id/baseBtn"
         android:text="3번"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/baseBtn"
+        android:layout_alignLeft="@id/baseBtn"
+        android:text="4번"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/baseBtn"
+        android:layout_alignRight="@id/baseBtn"
+        android:text="5번"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/baseBtn"
+        android:layout_toRightOf="@id/baseBtn"
+        android:text="6번"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/baseBtn"
+        android:layout_toRightOf="@id/baseBtn"
+        android:text="7번"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/baseBtn"
+        android:layout_toRightOf="@id/baseBtn"
+        android:text="8번"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/baseBtn"
+        android:layout_toRightOf="@id/baseBtn"
+        android:text="9번"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/baseBtn"
+        android:layout_toLeftOf="@id/baseBtn"
+        android:text="10번"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/baseBtn"
+        android:layout_toLeftOf="@id/baseBtn"
+        android:text="11번"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/baseBtn"
+        android:layout_toRightOf="@id/baseBtn"
+        android:text="12번"/>    
+
 </RelativeLayout>
