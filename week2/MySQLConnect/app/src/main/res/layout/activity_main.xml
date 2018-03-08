@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.koruniv.user.mysqlconnect.MainActivity">
+
+    <TextView
+        android:id="@+id/textView_main_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름: "/>
+
+    <EditText
+        android:id="@+id/editText_main_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView_main_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주소: "/>
+
+    <EditText
+        android:id="@+id/editText_main_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button_main_insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="입력"/>
+
+    <TextView
+        android:id="@+id/textView_main_result"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:text="전송결과: "/>
+
+</LinearLayout>

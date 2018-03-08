@@ -21,6 +21,7 @@
 ![안드로이드 스튜디오 3.0.1](/images/android_studio_version.jpg)
 
 
-## 5. 수업 관련 정보
+## 5. 수업 관련 정리
 * [Week1](/week1/week1.md)
 * [Week2](/week2/week2.md)
+* [Apache, PHP 서버 설치 및 MySQL 연동](/sqlprojects/sqlprojects.md)
