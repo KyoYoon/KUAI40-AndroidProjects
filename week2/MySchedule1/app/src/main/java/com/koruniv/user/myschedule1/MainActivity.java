@@ -1,19 +1,19 @@
 package com.koruniv.user.myschedule1;
 
-import android.graphics.Color;
-import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.CalendarView;
-import android.widget.Chronometer;
-import android.widget.RadioButton;
-import android.widget.TextView;
-import android.widget.TimePicker;
-import android.widget.Toast;
+        import android.graphics.Color;
+        import android.os.SystemClock;
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.CalendarView;
+        import android.widget.Chronometer;
+        import android.widget.RadioButton;
+        import android.widget.TextView;
+        import android.widget.TimePicker;
+        import android.widget.Toast;
 
-import java.util.Calendar;
+        import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        // 년월일을 선택할 때마다 호출되는 메소드로써 사용자 선택한 년, 월, 일을 매개변수로 받는다.
         calView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             public void onSelectedDayChange(CalendarView view, int year,
                                             int month, int dayOfMonth) {
