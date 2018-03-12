@@ -1443,16 +1443,23 @@
 
 ##6-0. PHP 기반 아파치 서버 시작 및 DB 상태 확인
 * PHP 아파치 서버를 다운로드받아서 설치 후 설정 및 준비작업을 완료한다. 자세한 사항은 README.md 파일에 있는 [Apache, PHP 서버 설치 및 MySQL 연동준비](/sqlprojects/sqlprojects.md) 문서를 참고한다.
+
 * 모든 준비가 완료되면 명령 프롬프트를 관리자 권한으로 실행한다.
+
 ![실행화면1](/week2/images/mysqlconnect0_1.jpg)
 
 * 콘솔창에서 httpd -k stop 을 실행하여 기존 서버를 정지시키고 httpd -k start 를 눌러 실행한 후 서비스 상태(Apache 2.4)를 확인한다.
+
+
 ![실행화면2](/week2/images/mysqlconnect0_2.jpg)
 ![실행화면3](/week2/images/mysqlconnect0_3.jpg)
+
 * MySQL 서버가 동작하고 있는지 보기 위해 작업관리자를 열어서 process 탭에서 mysqld 를 확인한다.
+*
 ![실행화면4](/week2/images/mysqlconnect0_4.jpg)
 
 * MySQL 서버에 접속하여 testdb라는 데이터베이스를 만들고 제대로 만들어졌는지 확인한다. 접속 ID가 root 이고 비밀번호가 1234이므로 mysql -u root -p1234 를 실행하여 접속 후 testdb 라는 데이터베이스를 만들고 show databases 라는 명령어를 통해 생성되었는지 확인한다.
+
 ![실행화면5](/week2/images/mysqlconnect0_5.jpg)
 
 ## 6-1. MySqlConnect 앱 (레코드 삽입)
