@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="배경색 변경하기">
+        <menu>
+            <item
+                android:title="빨강"
+                android:id="@+id/mnuRed" />
+            <item
+                android:title="파랑"
+                android:id="@+id/mnuBlue" />
+            <item
+                android:title="노랑"
+                android:id="@+id/mnuYellow" />
+        </menu>
+    </item>
+    <item
+        android:checkable="true"
+        android:checked="true"
+        android:title="제목 보이기"
+        android:id="@+id/item_title" />
+    <item
+        android:title="그림 30도 회전"
+        android:id="@+id/item_rotation" />
+    <item
+        android:checkable="true"
+        android:title="그림 2배 확대하기"
+        android:id="@+id/item_expansion" />
+    <group
+        android:checkableBehavior="single"
+        android:id="@+id/group1">
+        <item
+            android:checked="true"
+            android:id="@+id/cat"
+            android:title="고양이 선택" />
+        <item
+            android:id="@+id/dog"
+            android:title="강아지 선택" />
+    </group>
+
+</menu>
