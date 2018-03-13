@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
+
+
 public class MainActivity extends AppCompatActivity {
 
     MyDBHelper myDBHelper;
@@ -36,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
         btnSelect = (Button) findViewById(R.id.btnSelect);
 
         // SQLite DB 연결
-        myDBHelper = new MyDBHelper(this);
+        final MyDBHelper myDBHelper = new MyDBHelper(getApplicationContext(), "testDB.db", null, 1);
+
+        //final MyDBHelper dbHelper = new MyDBHelper(getApplicationContext(), "testDB.db", null, 1);
 
         // 각 버튼 클릭시 발생하는 이벤트 정의
         // 초기화 버튼 클릭시
@@ -44,15 +49,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // 입력한 값 초기화
-                editName.setText("");
-                editNumber.setText("");
-                editNameResult.setText("");
-                editNumberResult.setText("");
-
-                // 테이블 생성
-                sqLiteDatabase = myDBHelper.getWritableDatabase();
+                //editName.setText("");
+                //editNumber.setText("");
+                //editNameResult.setText("");
+                //editNumberResult.setText("");
                 myDBHelper.onUpgrade(sqLiteDatabase, 1, 2);
-                sqLiteDatabase.close();
+
                 Toast.makeText(getApplicationContext(), "테이블 생성 및 초기화 완료", Toast.LENGTH_SHORT).show();
             }
         });
@@ -64,14 +66,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                String name = editName.getText().toString();
                 int num = Integer.parseInt(editNumber.getText().toString().trim());
 
-                sqLiteDatabase = myDBHelper.getWritableDatabase();
-                sqLiteDatabase.execSQL("INSERT INTO groupTBL VALUES('"
-                        + editName.getText().toString() + "', "
-                        + num + ");");
-                sqLiteDatabase.close();
-                Toast.makeText(getApplicationContext(), "입력됨", Toast.LENGTH_SHORT).show();
+                // 사용자가 입력한 값으로 구성된 레코드 객체를 이용하여 테이블에 삽입
+                myDBHelper.insert(new MyGroupRecord(name, num));
+
+                //Toast.makeText(getApplicationContext(), "입력됨", Toast.LENGTH_SHORT).show();
+
+                editNameResult.setText(myDBHelper.getNameResult());
+                editNumberResult.setText(myDBHelper.getNumberResult());
 
                 //btnSelect.callOnClick();
             }
@@ -100,28 +104,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public class MyDBHelper extends SQLiteOpenHelper {
 
-        public MyDBHelper(Context context) {
-            super(context, "groupDB.groupTBL", null, 1);
-        }
-
-        @Override
-        public void onCreate(SQLiteDatabase sqLiteDatabase) {
-            sqLiteDatabase.execSQL("CREATE TABLE groupTBL "+
-                    "(gName CHAR(20) PRIMARY KEY, "+
-                    "gNumber integer);");
-
-        }
-
-        @Override
-        public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
-            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS groupTBL");
-            onCreate(sqLiteDatabase);
-        }
-
-
-
-    }
 
 }
