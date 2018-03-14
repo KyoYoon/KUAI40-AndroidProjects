@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editName, editNumber, editNameResult, editNumberResult;
     Button btnInit, btnInsert, btnUpdate, btnDelete, btnSelect;
     SQLiteDatabase sqLiteDatabase;
+    //String oldName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         btnUpdate = (Button) findViewById(R.id.btnUpdate);
         btnDelete = (Button) findViewById(R.id.btnDelete);
         btnSelect = (Button) findViewById(R.id.btnSelect);
+
+
 
         // SQLite DB 연결
         final MyDBHelper myDBHelper = new MyDBHelper(getApplicationContext(), "testDB.db", null, 1);
@@ -66,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String name = editName.getText().toString();
+                String name = editName.getText().toString().trim();
                 int num = Integer.parseInt(editNumber.getText().toString().trim());
 
                 // 사용자가 입력한 값으로 구성된 레코드 객체를 이용하여 테이블에 삽입
@@ -81,23 +84,44 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 수정 버튼 클릭시
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                String name = editName.getText().toString().trim();
+                int num = Integer.parseInt(editNumber.getText().toString().trim());
+
+                // 사용자가 입력한 인원으로 수정
+                myDBHelper.update(new MyGroupRecord(name, num));
+
+                editNameResult.setText(myDBHelper.getNameResult());
+                editNumberResult.setText(myDBHelper.getNumberResult());
+
             }
         });
 
+        // 삭제 버튼 클릭시
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String name = editName.getText().toString().trim();
 
+                // 레코드 삭제
+                myDBHelper.delete(name);
+
+                editNameResult.setText(myDBHelper.getNameResult());
+                editNumberResult.setText(myDBHelper.getNumberResult());
             }
         });
 
+        // 조회 버튼 클릭시
         btnSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                editNameResult.setText(myDBHelper.getNameResult());
+                editNumberResult.setText(myDBHelper.getNumberResult());
 
             }
         });

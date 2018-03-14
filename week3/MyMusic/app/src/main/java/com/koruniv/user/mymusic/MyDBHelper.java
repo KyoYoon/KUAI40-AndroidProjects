@@ -48,6 +48,29 @@ public class MyDBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void update(MyGroupRecord myGroupRecord) {
+
+        // 읽고 쓰기가 가능하게 DB 열기
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(KEY_NUMBER, myGroupRecord.getgNumber());
+
+        db.update(TABLE_groupTBL, values, KEY_NAME + "=?", new String[]{myGroupRecord.getgName()});
+        db.close();
+
+
+    }
+
+    public void delete(String name) {
+
+        // 읽고 쓰기가 가능하게 DB 열기
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_groupTBL, KEY_NAME + "=?", new String[]{name});
+        db.close();
+
+    }
+
     public String getNameResult() {
         // 읽기가 가능하게 DB 열기
         SQLiteDatabase db = getReadableDatabase();
