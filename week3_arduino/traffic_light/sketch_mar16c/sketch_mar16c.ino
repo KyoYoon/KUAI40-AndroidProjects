@@ -66,7 +66,7 @@ void changeLED() {
    }
    
    // 보행자가 다 건너게 되면 다시 차량이 운행할 수 있는 상태로 만든다.
-   Serial.println("Start traffic system....");
+   Serial.println("Start Traffic Light System...");
 
    // 신호등을 초기상태로 전환한다.
    initLED();
