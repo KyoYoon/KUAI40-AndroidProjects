@@ -11,7 +11,33 @@
 #define TIME_USE_HUMAN 5 // 녹색신호등이 점등될 때 사람이 건너가는 데 걸리는 시간 (초)
 #define BLINK_COUNT 5    // 녹색신호등일 깜빡깜빡거리는 시간 (초) => (사람보고 빨리 건너라고 경고를 주는 의미)
 
+#define C 262 // 도 
+#define D 294 // 레
+#define E 330 // 미 
+#define F 349 // 파 
+#define G 392 // 솔 
+#define A 440 // 라 
+#define B 494 // 시
+
+int piezoPin = 7;
+int tempo = 200;
+int notes[25] = {G, G, A, A, G, G, E, G, G, E, E, D,
+                 G, G, A, A, G, G, E, G, E, D, E, C};
+
 unsigned long prevTime;
+
+void musicPlay() {
+  // put your main code here, to run repeatedly:
+  for(int i = 0; i < 12; i++) {
+    tone(piezoPin, notes[i], tempo);
+    delay(300);
+  }
+  delay(200);
+  for(int i = 12; i<35; i++) {
+    tone (piezoPin, notes[i], tempo);
+    delay(300);
+  }
+}
 
 void initLED() {
 
@@ -52,7 +78,9 @@ void changeLED() {
    digitalWrite(pinHumanG, HIGH); 
 
    // 사람이 건널 수 있게 5초간 지연시킨다.
-   delay(TIME_USE_HUMAN * 1000);
+   //delay(TIME_USE_HUMAN * 1000);
+
+   musicPlay();
 
    // 녹색불을 5초간 깜빡거리게 만든다.
    Serial.println("5 seconds remain using cross line ... ");
