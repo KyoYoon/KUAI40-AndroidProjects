@@ -1,0 +1,77 @@
+AT
+
+OK
+
+
+AT+GMR // 펌웨어 정보를 알기
+0018000902
+
+
+OK
+
+
+AT+CWMODE? // Wi-Fi 모드 알기 
++CWMODE:1
+
+
+OK
+
+// 1. AT+CWMODE=1 // Station (Client)
+// 2. AT+CWMODE=2 // AP (Host)
+// 3. AT+DWMODE=3 // Station / AP Dual Mode
+
+AT+CWMODE=1 // Station mode 로 변환 
+No change  // 이미 설정되어있음 
+
+--------------------------------------------------------------------------
+AT+CWLAP // 공유기 정보 구하기 
++CWLAP:(0,"KoreaUniv AP",-70,"38:0e:4d:c7:13:60",1)
++CWLAP:(0,"ESP_26A206",-55,"1a:fe:34:26:a2:06",1)
++CWLAP:(0,"eduroam",-80,"38:0e:4d:c2:86:e1",1)
++CWLAP:(0,"eduroam",-80,"38:0e:4d:c3:5a:82",1)
++CWLAP:(0,"KoreaUniv AP",-79,"38:0e:4d:c2:86:e0",1)
++CWLAP:(3,"CTL2",-76,"88:36:6c:4e:3c:8c",3)
++CWLAP:(0,"KoreaUniv AP",-79,"38:0e:4d:c3:5a:80",1)
++CWLAP:(4,"CTL1",-78,"88:36:6c:21:67:8e",5)
++CWLAP:(0,"eduroam",-87,"88:f0:77:be:e5:a2",5)
++CWLAP:(3,"강영아의 iPhone",-64,"ee:44:63:2f:3f:25",6)
++CWLAP:(0,"HP-Print-cb-LaserJet Pro MFP",-82,"ec:0e:c4:1e:87:cb",6)
++CWLAP:(0,"netis",-90,"e4:be:ed:a8:e8:9a",7)
++CWLAP:(0,"eduroam",-70,"38:0e:4d:c7:13:61",1)
++CWLAP:(3,"KU_TEMP01_2.4G",-50,"88:36:6c:0f:3d:f2",8)
++CWLAP:(0,"KoreaUniv AP",-80,"38:0e:4d:ec:6c:e0",9)
++CWLAP:(0,"eduroam",-77,"38:0e:4d:ec:6c:e2",9)
++CWLAP:(0,"eduroam",-77,"88:f0:77:bf:1d:42",13)
++CWLAP:(0,"KoreaUniv AP",-86,"88:f0:77:ac:81:30",13)
++CWLAP:(0,"eduroam",-83,"88:f0:77:ac:81:32",13)
++CWLAP:(0,"KoreaUniv AP",-72,"38:0e:4d:87:2a:40",13)
++CWLAP:(0,"eduroam",-73,"38:0e:4d:87:2a:41",13)
++CWLAP:(0,"KoreaUniv AP",-76,"88:f0:77:bf:1d:40",13)
+
+OK
+
+-------------------------------------------------------------------------------------------------
+AT+CWJAP="KU_TEMP01_2.4G","korea123!" //  "SSID","비밀번호" 형식으로 입력하여 접속 
+
+OK
+
+
+AT+CWJAP?
++CWJAP:"KU_TEMP01_2.4G"
+
+OK
+
+
+AT+CIFSR // IP 주소 알기 
+192.168.0.57
+
+OK
+
+AT+CIUPDATE // 모듈 업데이트 
+
++CIPUPDATE:1
++CIPUPDATE:2
++CIPUPDATE:3
++CIPUPDATE:4
+
+OK
