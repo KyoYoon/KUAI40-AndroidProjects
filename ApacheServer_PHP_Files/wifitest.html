@@ -1,0 +1,31 @@
+<html>
+
+<head>
+</head>
+
+<body>
+	<center>
+		<font size=4 face="굴림" color="BLUE">ESP8266</font><br>
+		<font size=4 face="굴림" color="LIGHTBLUE">LED</font>
+	</center>
+	<center>
+		<button id="13" class="led" style="height:60; width:100;">
+	</center>
+
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".led").click(function() {
+				var p = $(this).attr('id');
+				$.get("http://192.168.0.57:80", {pin:p}); // 아두이노 장비의 주소 입력 
+
+			});
+		});
+	</script>
+</body>
+
+</html>

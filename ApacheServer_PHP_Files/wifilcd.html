@@ -1,0 +1,32 @@
+<html>
+ <head>
+  <title> ★ESP8266로 LCD 구동하기★ </title>
+ </head>
+ <body>
+ </br></br>
+ <center>
+ <br><font size=4 face="맑은 고딕" color="GRAY"> ESP8266 Project 3</br>
+ <font size=6 face="맑은고딕" color="LIGHTBLUE"> ★ ESP8266로 LCD에 원하는 문자 출력하기 ★
+ </font></center></br></br>
+ <center>
+ </br></br>
+ <font size=3 face="맑은 고딕" color="BLACK"> 영어 또는 숫자로 이루어진 <mark>16자 이내</mark>의 문자를 입력해주세요.
+ </br></br>
+ <input type="text" id="string" class="text" style="height:50; width:350;" maxlength=16>
+ <button id="save" class="button" style="height:50; width:80;"><font size=3 face="맑은 고딕">전 송</font></button>
+ </center>
+ 
+ <script src="jquery.min.js"></script>
+ <script type="text/javascript">
+  $(document).ready(function(){
+   var arr="";
+   $(".button").click(function(){
+    arr=$("#string").val();
+ 
+    // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+    $.get("http://192.168.0.57:80/", {pin:arr}); // execute get request
+   });
+  });
+ </script>
+ </body>
+</html>
